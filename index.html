@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		
+		/*css초기화*/
+		body,h1,h2,h3,p,ol,ul{margin: 0; padding: 0;}
+
+
+		h1{font-size: 8rem;
+			padding: 360px 50px;
+			text-align: center;
+			margin: 0 auto;
+			width: 1200px;}
+
+		h2{color: white;
+			font-size: 3.5rem;
+			padding:150px 50px;
+			line-height: 1.2;}
+
+		body{overflow-x: hidden;}
+
+
+		/*nav 관련*/
+		nav{position:fixed;
+		    top:0;
+		    width:100%;
+		    height: 80px;
+		    background:rgba(0,0,0,0.1);
+		    backdrop-filter:blur(10px);
+			z-index: 999;}
+
+		.nav-inner{
+		    max-width:1400px;
+		    margin: 0 auto;
+		    padding:0px 50px;
+		    height: 80px;
+		    display:flex;
+		    justify-content:space-between;
+		    align-items:center;
+			}
+
+		.nav-menu{
+		    display:flex;
+		    list-style: none;
+		    gap: 70px;
+		    padding-left: 120px;
+			}
+
+		.nav-menu a{
+		    padding:5px 5px;
+		    text-decoration:none;
+		    color:white;
+			}
+	
+		.bgtransparent{background:rgba(0,0,0,0.5);
+    			backdrop-filter: blur(10px);
+				position: fixed;
+				top: 0;
+    			width: 100%;
+    			}
+
+    	.logo{margin: 0;
+    		white-space: nowrap;
+    		color: white;}
+
+		ul{list-style: none;}
+
+		li,a{text-decoration: none;
+			color: white;}
+
+		a:hover{background:#970907; color:white;
+			transition: all 0.5s;
+			text-decoration: none;
+			}
+
+		section{
+			word-break: keep-all;
+			}
+
+		.container{
+	    width: 100%;
+	    margin: 0 auto;
+	    padding: 0 50px;
+		}
+
+		.text-right{
+	    text-align: right;
+		}
+	
+		.text-left{
+	    text-align: left;
+		}
+	
+
+		/*top*/
+		.pcenter{padding: 30px 0px;
+			text-align: center;
+			width: 800px;
+			margin: auto;
+			font-size: 1.1rem;}
+
+		.cover{background: url(coverimg.jpg);
+			background-size: cover;}
+
+
+		/*offer*/
+		.bgblack{background-color: black;
+			color: white;
+			}	
+
+		.text_attach{padding-bottom: 0px;}
+		
+		.line-text{
+   			 display:flex;
+   			 align-items:center;
+   			 gap:8px;
+   			 padding-top:0px;
+   			margin-top: -145px;}
+
+		.line{
+		    flex:0.3;
+		    height:3px;
+		    background:white;}
+
+		.small{
+		    font-size:3.5rem;
+		    }
+
+		.text-section{
+   		 position: relative;
+   		 width: 100%;
+	    max-width: 2000px;
+	    min-height: 900px;
+	    margin: 0 auto;
+			}
+
+		.text-section::after{
+		    content: "";
+		    position: absolute;
+
+
+		    right: 0;
+		    bottom: 0;
+
+		    width: 700px;
+		    min-height: 850px;
+
+		    background: url("Regret.jpg") no-repeat;
+		    background-position: right bottom;
+		    background-size: 650px auto;
+		}
+
+		
+		.contents{
+		    position: relative;
+		    z-index: 1;
+		    padding-top: 100px;
+		    padding-bottom: 200px;
+
+		}
+
+	
+
+		
+		@media (max-width: 900px){
+		    .text-section::after{
+		        position: static;
+		        display: block;
+		        margin: 50px auto 0;
+		        width: 80%;
+		        height: 400px;
+		    }
+			}
+
+		.chanceimg{background: url(aicron_019d90e9-88df-7651-b953-a8ac256b8253.png);
+			position: relative;
+			background-color: #970907;
+			background-position: 300px top;   
+   			 background-size: 800px;        
+    		background-repeat: no-repeat;
+    		}
+
+
+		
+		.smallh2{color: white;
+			text-align: center;
+			font-size: 2rem;
+			padding-left: 200px;
+			margin: 0;
+			width: 1000px;
+			text-shadow:0 2px 8px rgba(0,0,0,0.6);}
+
+
+		.section-title{
+		    padding-top: 400px;     
+		    padding-bottom: 50px;   
+		}
+
+		.typo{padding: 250px 50px}
+
+		.endlessly{color: black;
+			text-align: center;
+			font-size: 1.2rem;
+			padding: 30px 0px;
+			width: 1000px;
+			margin: auto;}
+
+		.information{padding: 180px 100px;
+			text-align: center;}
+
+		.info_title{padding-bottom: 30px;
+			font-size: 1.7rem;
+			width: 600px;
+			margin: auto;}
+		.info_text{line-height: 1.9;
+			text-align: center;
+			font-size: 1.1rem;
+			width: 600px;
+			margin: auto;}
+
+		/*function*/
+		.t_black{color: black;}
+		.align_right{padding-left: 650px;
+			padding-right: 150px;
+			padding-bottom: 70px;}
+		.maintext{font-size: 1.1rem;
+			line-height: 1.9;}
+		.align_left{padding-left: 150px;
+			padding-bottom: 70px;
+			padding-right: 550px;}
+		.align_left_2{padding-left: 150px;
+			padding-bottom: 70px;
+			padding-right: 350px;}
+		.space_pad{padding-top: 100px;
+			padding-bottom: 100px;}
+
+		/*condition*/
+		.h2_center{text-align: center;
+			padding-bottom: 70px;
+			width: 800px;
+			margin: auto;}
+		.align_center{text-align: center;
+					padding-bottom: 100px;
+					width: 800px;
+					margin: auto;}
+
+		/*warning*/
+		.warn_bg{background-color: #970907;
+			background: url(devil.png);
+			background-size: cover;
+			height: 1000px;}
+		.align_right_2{padding-left: 800px;
+			padding-right: 100px;
+			padding-bottom: 70px;
+			text-shadow:0 2px 8px rgba(0,0,0,0.6);}
+		.t_white{color: white;}
+		.button{text-align: center;}
+		.abuse{width: 1000px;
+			margin: auto;
+			font-size: 5rem;
+			color: #970907;
+			text-align: center;}
+
+		/*footer*/
+		footer{}
+
+		.animation-group {
+		    display: flex;
+		    width: max-content; 
+		    animation: scroll-left 12s linear infinite;
+		}
+		
+		@keyframes scroll-left {
+		    0% {transform: translateX(0);}
+		    100% {transform: translateX(-50%);}
+		}
+
+		.animation-item {
+		    font-size: 6rem;
+		    font-weight: 800;
+		    flex-shrink: 0;
+		    margin-right: 0; 
+		    display: flex;
+		    align-items: center;
+		}
+	
+
+		
+		.footer-bg {
+		    position: absolute;
+		    width: 100%;
+		    height: 300px;
+		    background-image: url('coverimg.jpg'); 
+		    background-size: cover;
+		    background-position: center;}
+
+		 .wrap{width: 1500px; margin:0; position: relative;}
+		    
+
+
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="nav-inner">
+			<div class="logo">
+				<h3>Ouroborus Watch</h3>
+			</div>
+			<ul class="nav-menu">
+				<li><a href="top">TOP</a></li>
+				<li><a href="offer">OFFER</a></li>
+				<li><a href="function">FUNCTION</a></li>
+				<li><a href="condition">CONDITION</a></li>
+				<li><a href="directions">DIRECTIONS</a></li>
+				<li><a href="warning">WARNING</a></li>
+			</ul>
+		</div>
+	</nav>
+	<section class="cover">
+		<div class="t_white">
+			<h1>Ouroborus watch</h1>
+			<p class="pcenter">RETURNING TO THE PAST / CHANGE THE FUTURE / BUT YOU WILL PAY THE PRICE</p>
+		</div>
+	</section>
+	<section>
+		<div class="bgblack text-section wrap">
+			<div class="contents">
+
+			<h2 class="text_attach">내 인생은 어디서부터 잘못된걸까<br>재미도 없고 의미도 없다</h2>
+
+			<div class="line-text">
+				<h2>포기하고 싶다</h2>
+				<div class="line"></div>
+				<h2>삶에 미련이 없는 당신</h2>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="chanceimg">
+			<h2 class="smallh2">당신에게 재미있는 기회를 드립니다</h2>
+		</div>
+	</section>
+	<section>
+		<div class="bgblack wrap">
+			<h2 class="section-title">새로운 삶의 기회를 누려보세요.</h2>
+		</div>
+		<div>
+			<p class="endlessly">endlessly repeating the act of eating itself from the tail while simultaneously regenerating.</p>
+			<h1 class="typo">Ouroborus watch</h1>
+		</div>
+		<div class="bgblack information">
+			<h3 class="info_title">우로보로스 시계</h3>
+			<p class="info_text">우로보로스는 그리스어로 “꼬리를 삼키는 자”라는 의미를 가지고 있습니다. 자신의 꼬리를 물고 삼키는 뱀이나 용의 형상을 한 고대 상징입니다. 시작과 끝이 맞물려 있는 원형으로 
+			영원성, 윤회, 끊임없이 재생되는 순환의 의미를 담고 있습니다.</p>
+		</div>
+	</section>
+	<section>
+		<div class="wrap space_pad">
+			<h2 class="t_black align_right">24시간 전으로 돌아갑니다</h2>
+			<p class="t_black align_right maintext">사용법은 간단합니다. 오른쪽에 버튼을 누르면 누른 순간으로부터 정확히 24시간 전으로 돌아갑니다. 한번 누르면 절대 번복할 수 없습니다. 신중하게 누르세요</p>
+		</div>
+	</section>
+	<section>
+		<div class="space_pad wrap">
+			<h2 class="t_black align_left">사용 후 36시간이 지나야 합니다.</h2>
+			<p class="t_black align_left maintext">24시간 전으로 돌아가고 나서 36시간 동안 사용이 불가능합니다. 즉 12시간의 텀이 존재하고 시간을 영원히 유지하는 것은 불가능합니다. 잘 계산해서 사용하시기를 권장드립니다.</p>
+		</div>
+	</section>
+	<section>
+		<div class="bgblack">
+			<h2 class="abuse">DO NOT ABUSE</h2>
+			<h2 class="h2_center">사용 후 3년 뒤에 죽습니다.</h2>
+			<p class="align_center maintext">사용을 시작한 날로부터 3년 뒤에 당신은 죽게 됩니다. 미련 없이 3년 뒤에 죽을 각오가 되있는 분들만 시계를 사용해주시길 바랍니다. 한번 사용하게 되면 이 조건은 다시 되돌릴 수 없습니다.</p>
+		</div>
+	</section>
+	<section>
+		<div class="wrap">
+			<h2 class="t_black align_left_2">사용법은 당신에게 달렸습니다.</h2>
+			<p class="t_black align_left_2 maintext">시간을 되돌린 다음, 당신이 원하는 일들을 하시길 바랍니다. 부와 명예를 축적할 수도, 이어지지 못했던 인연을 다시 이어지게 할 수도, 사랑했던 가족과 다시 한번 마지막 시간을 보낼 수도, 누군가의 사고나 죽음을 막을 수도 있습니다.</p>
+		</div>
+	</section>
+	<section>
+		<div class="warn_bg wrap">
+			<h2 class="align_right_2">신중히 생각하세요.</h2>
+			<p class="align_right_2 t_white maintext">이 시계의 능 력은 단순한 능력이 아니라 큰 대가가 따릅니다. 그 대가
+			를 온전히 감당할 수 있을 때 사용하세요. 또한 사용 후 후회해도 소용
+			없습니다.</p>
+		</div>
+		<div class="animation-group">
+			<div class="animation-item">RETURNING TO THE PAST CHANGE THE FURURE BUT YOU WILL PAY THE PRICE</div>
+		</div>
+		<div>
+			<h3 class="button">획득하겠습니다</h3>
+		</div>
+	</section>
+	<footer>
+        <div class="footer-bg"></div>
+            <div>
+                <div>Ouroborus<br>Watch</div>
+                <div>This watch is inspired by Japanese novel <死にたがりな少女の自殺を邪魔して、遊びにつれていく話 - 星火燎原><One Day, You Entered My Death - Seika Ryogen>
+           	 	</div>
+            </div>
+            <div>
+                <p>Copyright © 2026 AhnSangJun. All rights reserved.</p>
+                <p>2026 SEOULTECH Web Interaction Design</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
